@@ -15,18 +15,6 @@ namespace KuasCore.Dao.Impl
             return new SchemaRowMapper();
         }
 
-        public void AddSchema(Schema schema)
-        {
-            string command = @"INSERT INTO Schema (CourseID, CourseName, CourseDescription) VALUES (@CourseID, @CourseName, @CourseDescription);";
-
-            IDbParameters parameters = CreateDbParameters();
-            parameters.Add("CourseID", DbType.String).Value = schema.CourseID;
-            parameters.Add("CourseName", DbType.String).Value = schema.CourseName;
-            parameters.Add("CourseDescription", DbType.Int32).Value = schema.CourseDescription;
-
-            ExecuteNonQuery(command, parameters);
-        }
-
         public void UpdateSchema(Schema schema)
         {
             string command = @"UPDATE Schema SET CourseName = @CourseName, CourseDescription = @CourseDescription WHERE CourseID = @CourseID;";

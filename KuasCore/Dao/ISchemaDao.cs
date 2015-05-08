@@ -7,6 +7,7 @@ namespace KuasCore.Dao
     public interface ISchemaDao
     {
         void AddSchema(Schema schema);
+        void UpdateSchema(Schema schema);
 
         IList<Schema> GetAllSchemas();
 

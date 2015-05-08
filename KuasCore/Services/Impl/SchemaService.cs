@@ -14,6 +14,12 @@ namespace KuasCore.Services.Impl
         {
             SchemaDao.AddSchema(schema);
         }
+
+       public void UpdateSchema(Schema schema)
+       {
+           SchemaDao.UpdateSchema(schema);
+       }
+
        public IList<Schema> GetAllSchemas()
         {
             return SchemaDao.GetAllSchemas();

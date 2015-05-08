@@ -22,7 +22,7 @@ namespace KuasCoreTests.Dao
             schema.CourseID = "UnitTests";
             schema.CourseName = "單元測試";
             schema.CourseDescription = "a";
-            SchemaDao.AddSchema(schema);
+            SchemaDao.UpdateSchema(schema);
 
             Schema dbSchema = SchemaDao.GetSchemaById(schema.CourseID);
             Assert.IsNotNull(dbSchema);
